@@ -1,0 +1,15 @@
+{
+  "name": "@syki/random",
+  "version": "1.0.2",
+  "description": "Library for generating random numbers, characters, letters, arrays of characters and numbers, and objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random"
+  ],
+  "type": "module",
+  "author": "Syki <mikolaj@syki.pl> (syki.pl)",
+  "license": "ISC"
+}
