@@ -2,7 +2,7 @@ function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function getRandomNumber(min, max, decimals) {
+function getRandomNumber(min, max, decimals = 0) {
     decimals = Math.pow(10, decimals);
     max *= decimals;
     const number = Math.floor(Math.random() * (max - min + 1) + min) / decimals;

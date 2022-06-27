@@ -2,12 +2,18 @@
 Library for generating random numbers, characters, letters, arrays of characters and numbers, and objects.
 Made by Syki <mikolaj@syki.pl> (syki.pl)
 
+[GitHub repositorie](https://github.com/xSyki/random);
+[Npmjs](https://www.npmjs.com/package/@syki/random);
+
+To intsall:
+npm i @syki/random
+
 getRandomInteger(minValue, maxValue);
 Example:
 getRandomInteger(0, 9)
 return 0 | 1 | ... | 9;
 
-getRandomNumber(minValue, maxValue, decimals);
+getRandomNumber(minValue, maxValue, decimals?(default is 0));
 Example:
 getRandomNumber(0, 9, 2);
 return 0.76 | 1.19 | ... | 9;
@@ -39,5 +45,5 @@ return "agkzm";
 
 getRandomArrayLetters(stringLength, arrayLength, stringLength?(by default is stringValue));
 Example:
-getRandomArrayLetters(0, 3, 5)
+getRandomArrayLetters(0, 3, 5);
 return [ 'mb', 'om', 'phlt' ];
