@@ -1,12 +1,12 @@
-import getRandomInteger from "./src/Numbers/getRandomInteger";
-import getRandomNumber from "./src/Numbers/getRandomNumber";
-import getRandomArrayNumber from "./src/Numbers/getRandomArrayNumber";
-import getRandomStringNumber from "./src/Numbers/getRandomStringNumber";
-import getRandomArrayStringNumber from "./src/Numbers/getRandomArrayStringNumber";
+import getRandomInteger from "./src/Numbers/getRandomInteger.js";
+import getRandomNumber from "./src/Numbers/getRandomNumber.js";
+import getRandomArrayNumber from "./src/Numbers/getRandomArrayNumber.js";
+import getRandomStringNumber from "./src/Numbers/getRandomStringNumber.js";
+import getRandomArrayStringNumber from "./src/Numbers/getRandomArrayStringNumber.js";
 
-import getRandomLetter from "./src/Letters/getRandomLetter";
-import getRandomString from "./src/Letters/getRandomString";
-import getRandomArrayLetters from "./src/Letters/getRandomArrayLetters";
+import getRandomLetter from "./src/Letters/getRandomLetter.js";
+import getRandomString from "./src/Letters/getRandomString.js";
+import getRandomArrayLetters from "./src/Letters/getRandomArrayLetters.js";
 
 export {
     getRandomInteger,

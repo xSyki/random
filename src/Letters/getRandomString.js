@@ -1,4 +1,4 @@
-import alphabet from "./Alphabet";
+import alphabet from "./Alphabet.js";
 
 export default function getRandomString(length) {
     if(typeof length !== 'number') {

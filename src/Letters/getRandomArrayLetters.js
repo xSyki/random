@@ -1,4 +1,4 @@
-import alphabet from "./Alphabet";
+import alphabet from "./Alphabet.js";
 
 export default function getRandomArrayLetters(minLength, arrayLength, maxLength = minLength) {
     if( typeof minLength !== 'number' || typeof maxLength !== 'number' || typeof arrayLength !== 'number' ) {
