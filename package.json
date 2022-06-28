@@ -1,16 +1,22 @@
 {
   "name": "@syki/random",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Library for generating random numbers, characters, letters, arrays of characters and numbers, and objects.",
   "main": "index.js",
   "keywords": [
     "random"
   ],
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
   "type": "module",
   "author": "Syki <mikolaj@syki.pl> (syki.pl)",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/xSyki/random"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
   }
 }
