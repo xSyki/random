@@ -1,6 +1,6 @@
 {
   "name": "@syki/random",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Library for generating random numbers, characters, letters, arrays of characters and numbers, and objects.",
   "main": "index.ts",
   "keywords": [
