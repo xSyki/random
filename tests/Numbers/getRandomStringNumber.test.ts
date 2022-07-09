@@ -1,4 +1,4 @@
-import { getRandomStringNumber } from "../../index";
+import { getRandomStringNumber } from "../../src/index";
 
 describe('Function - getRandomStringNumber', () => {
 

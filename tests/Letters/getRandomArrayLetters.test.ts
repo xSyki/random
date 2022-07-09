@@ -1,4 +1,4 @@
-import { getRandomArrayLetters } from "../../index";
+import { getRandomArrayLetters } from "../../src/index";
 
 describe('Function - getRandomArrayLetters', () => {
 

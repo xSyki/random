@@ -1,4 +1,4 @@
-import { getRandomLetter } from "../../index";
+import { getRandomLetter } from "../../src/index";
 import alphabet from "../../src/Letters/Alphabet";
 
 describe('Function - getRandomLetter', () => {
