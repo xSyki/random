@@ -1,7 +1,7 @@
-import { getRandomInteger } from "../../index.js";
+import { getRandomInteger } from "../../index";
 
 describe('Function - getRandomInteger', () => {
-    
+
     test('getRandomInteger function exists', () => {
         expect(getRandomInteger).toBeDefined();
         expect(typeof getRandomInteger).toBe('function');
@@ -32,9 +32,6 @@ describe('Function - getRandomInteger', () => {
     })
 
     test('Errors test', () => {
-        expect(() => getRandomInteger()).toThrow('Input have to be a number!');
-        expect(() => getRandomInteger("das")).toThrow('Input have to be a number!');
-        expect(() => getRandomInteger("das", "dsa")).toThrow('Input have to be a number!');
         expect(() => getRandomInteger(0, Infinity)).toThrow('Input can not be infinity!');
         expect(() => getRandomInteger(Infinity, Infinity)).toThrow('Input can not be infinity!');
     })

@@ -1,8 +1,8 @@
-export default function getRandomStringNumber(length) {
-    if(typeof length !== 'number') {
+export default function getRandomStringNumber(length: number) {
+    if (typeof length !== 'number') {
         throw 'Length of the string have to be a number!'
     }
-    if(length < 0 || length === Infinity) {
+    if (length < 0 || length === Infinity) {
         throw 'Length of the string can not be shorter than 0 and equal to infinity!';
     }
     let string = "";

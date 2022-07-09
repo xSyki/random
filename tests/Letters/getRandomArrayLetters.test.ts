@@ -1,4 +1,4 @@
-import { getRandomArrayLetters } from "../../index.js";
+import { getRandomArrayLetters } from "../../index";
 
 describe('Function - getRandomArrayLetters', () => {
 
@@ -14,7 +14,9 @@ describe('Function - getRandomArrayLetters', () => {
     });
 
     test('standart', () => {
-        const result = getRandomArrayLetters(0, 10, 10);
+        const result = getRandomArrayLetters(0, 10000, 10);
+
+        expect(result.length).toBe(10000);
 
         result.map(element => {
             expect(element.length).toBeGreaterThanOrEqual(0);
@@ -23,19 +25,19 @@ describe('Function - getRandomArrayLetters', () => {
     })
 
     test('min = max', () => {
-        const result = getRandomArrayLetters(10, 10);
+        const result = getRandomArrayLetters(10, 10000);
         result.map(element => {
             expect(element).toHaveLength(10);
         });
 
-        const result2 = getRandomArrayLetters(10, 10, 10);
+        const result2 = getRandomArrayLetters(10, 10000, 10);
         result2.map(element => {
             expect(element).toHaveLength(10);
         })
     })
 
     test('min > max', () => {
-        const result = getRandomArrayLetters(10, 10, 0);
+        const result = getRandomArrayLetters(10, 10000, 0);
 
         result.map(element => {
             expect(element.length).toBeGreaterThanOrEqual(0);
@@ -44,9 +46,6 @@ describe('Function - getRandomArrayLetters', () => {
     })
 
     test('Errors test', () => {
-        expect(() => getRandomArrayLetters(0, 10, "10")).toThrow('Input have to be a number!')
-        expect(() => getRandomArrayLetters(0, "10", 10)).toThrow('Input have to be a number!')
-        expect(() => getRandomArrayLetters("0", 10, 10)).toThrow('Input have to be a number!')
         expect(() => getRandomArrayLetters(10, 10, -10)).toThrow('Length can not be shorter than 0 and equal to infinity!')
         expect(() => getRandomArrayLetters(-10, 10, 10)).toThrow('Length can not be shorter than 0 and equal to infinity!')
         expect(() => getRandomArrayLetters(10, -10, 10)).toThrow('Length can not be shorter than 0 and equal to infinity!')

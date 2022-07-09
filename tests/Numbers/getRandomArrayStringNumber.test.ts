@@ -1,4 +1,4 @@
-import { getRandomArrayStringNumber } from "../../index.js";
+import { getRandomArrayStringNumber } from "../../index";
 
 describe('Function - getRandomArrayStringNumber', () => {
 
@@ -6,7 +6,7 @@ describe('Function - getRandomArrayStringNumber', () => {
         expect(getRandomArrayStringNumber).toBeDefined();
         expect(typeof getRandomArrayStringNumber).toBe('function');
 
-        const result = getRandomArrayStringNumber(0, 10, 10);
+        const result = getRandomArrayStringNumber(0, 10000, 10);
         expect(Array.isArray(result)).toBe(true);
         result.map(element => {
             expect(typeof element).toBe('string');
@@ -14,14 +14,14 @@ describe('Function - getRandomArrayStringNumber', () => {
     });
 
     test('standart', () => {
-        const result = getRandomArrayStringNumber(10, 10);
-        expect(result).toHaveLength(10);
+        const result = getRandomArrayStringNumber(100, 10000);
+        expect(result).toHaveLength(10000);
         result.map(element => {
-            expect(element).toHaveLength(10);
+            expect(element).toHaveLength(100);
         })
 
-        const result2 = getRandomArrayStringNumber(0, 10, 10);
-        expect(result2).toHaveLength(10);
+        const result2 = getRandomArrayStringNumber(0, 10000, 10);
+        expect(result2).toHaveLength(10000);
         result2.map(element => {
             expect(typeof element).toBe('string');
             expect(element.length).toBeGreaterThanOrEqual(0);
@@ -33,7 +33,7 @@ describe('Function - getRandomArrayStringNumber', () => {
         expect(getRandomArrayStringNumber(0, 2)).toStrictEqual(["", ""]);
         expect(getRandomArrayStringNumber(0, 2, 0)).toStrictEqual(["", ""]);
 
-        const result = getRandomArrayStringNumber(10, 10, 10);
+        const result = getRandomArrayStringNumber(10, 10000, 10);
 
         result.map(element => {
             expect(element).toHaveLength(10);
@@ -46,9 +46,6 @@ describe('Function - getRandomArrayStringNumber', () => {
     });
 
     test('errors', () => {
-        expect(() => getRandomArrayStringNumber("das", "dsa", "dsa")).toThrow('Input have to be a number!');
-        expect(() => getRandomArrayStringNumber(0, 10, "das")).toThrow('Input have to be a number!');
-        expect(() => getRandomArrayStringNumber()).toThrow('Input have to be a number!');
         expect(() => getRandomArrayStringNumber(0, 10, -10)).toThrow('Length can not be shorter than 0 and equal to infinity!');
         expect(() => getRandomArrayStringNumber(0, Infinity, Infinity)).toThrow('Length can not be shorter than 0 and equal to infinity!');
         expect(() => getRandomArrayStringNumber(Infinity, Infinity, Infinity)).toThrow('Length can not be shorter than 0 and equal to infinity!');

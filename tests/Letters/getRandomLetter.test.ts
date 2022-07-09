@@ -1,4 +1,4 @@
-import { getRandomLetter } from "../../index.js";
+import { getRandomLetter } from "../../index";
 import alphabet from "../../src/Letters/Alphabet";
 
 describe('Function - getRandomLetter', () => {

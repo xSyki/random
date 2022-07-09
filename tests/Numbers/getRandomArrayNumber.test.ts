@@ -1,4 +1,4 @@
-import { getRandomArrayNumber } from "../../index.js";
+import { getRandomArrayNumber } from "../../index";
 
 describe('Function - getRandomArrayNumber', () => {
 
@@ -6,7 +6,7 @@ describe('Function - getRandomArrayNumber', () => {
         expect(getRandomArrayNumber).toBeDefined();
         expect(typeof getRandomArrayNumber).toBe('function');
 
-        const result = getRandomArrayNumber(0, 10, 10);
+        const result = getRandomArrayNumber(0, 10, 10000);
         expect(Array.isArray(result)).toBe(true);
         result.map(element => {
             expect(typeof element).toBe('number');
@@ -14,9 +14,9 @@ describe('Function - getRandomArrayNumber', () => {
     });
 
     test('positive values', () => {
-        const result = getRandomArrayNumber(0, 10, 10);
+        const result = getRandomArrayNumber(0, 10, 10000);
 
-        expect(result).toHaveLength(10);
+        expect(result).toHaveLength(10000);
 
         result.map(element => {
             expect(element).toBeGreaterThanOrEqual(0);
@@ -25,9 +25,9 @@ describe('Function - getRandomArrayNumber', () => {
     });
 
     test('Negative values', () => {
-        const result = getRandomArrayNumber(-10, 0, 10);
+        const result = getRandomArrayNumber(-10, 0, 10000);
 
-        expect(result).toHaveLength(10);
+        expect(result).toHaveLength(10000);
 
         result.map(element => {
             expect(element).toBeGreaterThanOrEqual(-10);
@@ -54,9 +54,6 @@ describe('Function - getRandomArrayNumber', () => {
     });
 
     test('errors', () => {
-        expect(() => getRandomArrayNumber("das", "dsa", "dsa")).toThrow('Input have to be a number!');
-        expect(() => getRandomArrayNumber(0, 10, "das")).toThrow('Input have to be a number!');
-        expect(() => getRandomArrayNumber()).toThrow('Input have to be a number!');
         expect(() => getRandomArrayNumber(0, 10, -10)).toThrow('Length of the array can not be shorter than 0!');
         expect(() => getRandomArrayNumber(0, Infinity, Infinity)).toThrow('Input can not be infinity!');
         expect(() => getRandomArrayNumber(Infinity, Infinity, Infinity)).toThrow('Input can not be infinity!');

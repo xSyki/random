@@ -1,7 +1,7 @@
-import { getRandomNumber } from "../../index.js";
+import { getRandomNumber } from "../../index";
 
 describe('Function - getRandomNumber', () => {
-    
+
     test('getRandomNumber function exists', () => {
         expect(getRandomNumber).toBeDefined();
         expect(typeof getRandomNumber).toBe('function');
@@ -50,9 +50,6 @@ describe('Function - getRandomNumber', () => {
     })
 
     test('Errors test', () => {
-        expect(() => getRandomNumber()).toThrow('Input have to be a number!');
-        expect(() => getRandomNumber("0", "10", "-10")).toThrow('Input have to be a number!');
-        expect(() => getRandomNumber("das", "dsa", "dsb")).toThrow('Input have to be a number!');
         expect(() => getRandomNumber(0, 10, -10)).toThrow('Number of decimals can not be shorter than 0 and longer than 15!');
         expect(() => getRandomNumber(0, 10, 20)).toThrow('Number of decimals can not be shorter than 0 and longer than 15!');
         expect(() => getRandomNumber(0, Infinity)).toThrow('Input can not be infinity!');

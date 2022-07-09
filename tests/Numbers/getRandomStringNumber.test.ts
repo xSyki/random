@@ -1,4 +1,4 @@
-import { getRandomStringNumber } from "../../index.js";
+import { getRandomStringNumber } from "../../index";
 
 describe('Function - getRandomStringNumber', () => {
 
@@ -16,8 +16,6 @@ describe('Function - getRandomStringNumber', () => {
     });
 
     test('Errors test', () => {
-        expect(() => getRandomStringNumber("dsa")).toThrow('Length of the string have to be a number!')
-        expect(() => getRandomStringNumber([10])).toThrow('Length of the string have to be a number!')
         expect(() => getRandomStringNumber(Infinity)).toThrow('Length of the string can not be shorter than 0 and equal to infinity!')
         expect(() => getRandomStringNumber(-10)).toThrow('Length of the string can not be shorter than 0 and equal to infinity!')
     });

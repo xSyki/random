@@ -1,13 +1,13 @@
 {
   "name": "@syki/random",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Library for generating random numbers, characters, letters, arrays of characters and numbers, and objects.",
   "main": "index.js",
   "keywords": [
     "random"
   ],
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "node node_modules/.bin/jest"
   },
   "type": "module",
   "author": "Syki <mikolaj@syki.pl> (syki.pl)",
@@ -20,6 +20,9 @@
     "url": "https://github.com/xSyki/random/issues"
   },
   "devDependencies": {
-    "jest": "^28.1.1"
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
   }
 }
